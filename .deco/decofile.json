@@ -459,11 +459,11 @@
     ],
     "mainColors": {
       "neutral": "#f9f9f9",
-      "primary": "#384c53",
-      "warning": "#e08e00",
+      "primary": "#00f0a0",
+      "warning": "#ff0000",
       "base-100": "#ffffff",
-      "tertiary": "#ffeaaf",
-      "secondary": "#ffeaaf"
+      "tertiary": "#00aaff",
+      "secondary": "#940000"
     },
     "buttonStyle": {
       "--border-btn": "1px",
