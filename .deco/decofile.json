@@ -2665,6 +2665,9 @@
         "__resolveType": "ProductCard"
       },
       {
+        "__resolveType": "PartialImageGalery"
+      },
+      {
         "__resolveType": "site/sections/Images/Carousel.tsx",
         "dots": false,
         "arrows": true,
@@ -2882,8 +2885,8 @@
         }
       },
       {
-        "title": "Best Sellers",
         "__resolveType": "site/sections/Product/ProductShelfTabbed.tsx",
+        "title": "Best Sellers",
         "tabs": [
           {
             "title": "Woman",
@@ -2951,9 +2954,6 @@
       },
       {
         "__resolveType": "Footer - 04"
-      },
-      {
-        "__resolveType": "PartialImageGalery"
       }
     ],
     "__resolveType": "website/pages/Page.tsx",
