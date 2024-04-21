@@ -5369,6 +5369,9 @@
       "isAccessoryOrSparePartFor": [],
       "questions": []
     },
-    "platform": "vtex"
+    "platform": "vtex",
+    "page": {
+      "__resolveType": "PDP Loader"
+    }
   }
 }
