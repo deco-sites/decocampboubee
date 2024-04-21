@@ -3646,5 +3646,26 @@
   },
   "weather": {
     "__resolveType": "decohub/apps/weather.ts"
+  },
+  "pages-Quem%20somos-290614": {
+    "name": "Quem somos",
+    "path": "/quem-somos",
+    "sections": [
+      {
+        "__resolveType": "site/sections/Content/Hero.tsx",
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/719923a9-ce60-4fd8-bca6-c3d4a6dfa920",
+        "description": " Em um mundo tão vasto e diversificado, é fácil se perder na correria do dia a dia e esquecer a beleza das conexões culturais que nos cercam. Mas e se eu te dissesse que existe um lugar onde essas conexões são celebradas, onde a diversidade é mais do que apenas uma palavra, é uma experiência viva e pulsante?  Bem-vindo à \"Conexões Culturais\" - mais do que uma simples loja online, é um portal para um mundo de descobertas emocionantes e encontros significativos. Aqui, cada produto e experiência é uma janela aberta para uma cultura diferente, um convite para explorar, aprender e se conectar de maneiras que talvez você nunca tenha imaginado.  Imagine-se viajando pelo mundo sem sair do conforto do seu lar, guiado por aromas exóticos e sabores irresistíveis. Na nossa seção de Culinária Internacional, você pode experimentar a autenticidade de cada prato, mergulhando nas tradições culinárias de diferentes países através de ingredientes frescos, especiarias únicas e receitas transmitidas de geração em geração. E se quiser dar um passo além, junte-se a nós em nossos workshops ao vivo, onde chefs locais compartilham seus segredos e paixões, transformando a cozinha em um palco de intercâmbio cultural.",
+        "placement": "right",
+        "title": "<p>Conexões Culturais</p>",
+        "cta": [
+          {
+            "variant": "Normal",
+            "href": "https://www.tec4udigital.com/",
+            "text": "Conheça sites performaticos"
+          }
+        ]
+      }
+    ],
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
