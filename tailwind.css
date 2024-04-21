@@ -29,6 +29,10 @@
 }
 
 @layer components {
+  .container {
+    @apply w-11/12
+  }
+
   .features {
     @apply flex items-center justify-center gap-6 flex-wrap;
     @apply relative max-w-[1280px] mx-auto;
