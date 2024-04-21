@@ -2951,6 +2951,9 @@
       },
       {
         "__resolveType": "Footer - 04"
+      },
+      {
+        "__resolveType": "PartialImageGalery"
       }
     ],
     "__resolveType": "website/pages/Page.tsx",
@@ -5373,5 +5376,47 @@
     "page": {
       "__resolveType": "PDP Loader"
     }
+  },
+  "PartialImageGalery": {
+    "__resolveType": "site/sections/PartialImageGallery.tsx",
+    "images": [
+      {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/76495ce7-be7e-4f10-9303-b3fd97335510",
+        "alt": "Bolo de chocolate",
+        "width": 200,
+        "height": 200
+      },
+      {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/76495ce7-be7e-4f10-9303-b3fd97335510",
+        "alt": "Bolo de chocolate",
+        "width": 200,
+        "height": 200
+      },
+      {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/76495ce7-be7e-4f10-9303-b3fd97335510",
+        "alt": "Bolo de chocolate",
+        "width": 200,
+        "height": 200
+      },
+      {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/76495ce7-be7e-4f10-9303-b3fd97335510",
+        "alt": "Bolo de chocolate",
+        "width": 200,
+        "height": 200
+      },
+      {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/76495ce7-be7e-4f10-9303-b3fd97335510",
+        "alt": "Bolo de chocolate",
+        "width": 200,
+        "height": 200
+      },
+      {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/76495ce7-be7e-4f10-9303-b3fd97335510",
+        "alt": "Bolo de chocolate",
+        "width": 200,
+        "height": 200
+      }
+    ],
+    "maxLength": 3
   }
 }
