@@ -79,7 +79,7 @@ export function ErrorFallback({ error }: {error?: Error}) {
 }
 
 export function LoadingFallback() {
-    return ( <div
+    return  ( <div
         data-deco="view-product"
         class="card card-compact group w-full border lg:p-4"
       >
@@ -94,7 +94,7 @@ export function LoadingFallback() {
           </div>
   
           {/* Name/Description */}
-          <div class="flex flex-col max-md:hidden">
+          <div class="flex flex-col gap-4 max-md:hidden w-72">
             <h2
               class="skeleton w-full h-7"
             />
@@ -106,9 +106,9 @@ export function LoadingFallback() {
           
   
           </div>
-          <div class="flex flex-col justify-between px-4 md:border-l min-h-52 h-full">
+          <div class="flex flex-col justify-between w-52 px-4 md:border-l min-h-52 h-full">
           {/* Name/Description */}
-          <div class="flex flex-col md:hidden">
+          <div class="flex flex-col gap-4 md:hidden">
             <h2
               class="skeleton w-full h-7"
             />
@@ -117,7 +117,7 @@ export function LoadingFallback() {
               class="skeleton w-full h-4"
             />
           </div>
-  
+
           {/* Price from/to */}
           <div class="flex gap-2 items-center justify-end font-light">
             <span class="skeleton w-full h-6" />
