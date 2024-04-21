@@ -9,9 +9,10 @@ import AddToCartButton from "../islands/AddToCartButton/vtex.tsx";
 import { formatPrice } from "../sdk/format.ts";
 import { relative } from "../sdk/url.ts";
 import { useOffer } from "../sdk/useOffer.ts";
+import type { ProductDetailsPage } from "apps/commerce/types.ts";
 
 interface Props {
-  product: Product;
+  page: ProductDetailsPage | null;
   /** Preload card image */
   preload?: boolean;
 
@@ -80,12 +81,71 @@ export function ErrorFallback({ error }: {error?: Error}) {
 </div>
 }
 
+export function LoadingFallback() {
+    return ( <div
+        data-deco="view-product"
+        class="card card-compact group w-full border lg:p-4"
+      >
+  
+        <div class="flex flex-row flex-wrap items-start max-md:justify-center md:justify-between rounded-xl min-h-52 gap-4 p-4">
+          <div class="flex justify-start gap-4">
+          {/* Product Image */}
+          <div
+            class="skeleton"
+            style={{ aspectRatio, width: WIDTH, height: HEIGHT }}
+          >
+          </div>
+  
+          {/* Name/Description */}
+          <div class="flex flex-col max-md:hidden">
+            <h2
+              class="skeleton w-full h-7"
+            />
+  
+            <div
+              class="skeleton w-full h-4"
+            />
+          </div>
+          
+  
+          </div>
+          <div class="flex flex-col justify-between px-4 md:border-l min-h-52 h-full">
+          {/* Name/Description */}
+          <div class="flex flex-col md:hidden">
+            <h2
+              class="skeleton w-full h-7"
+            />
+  
+            <div
+              class="skeleton w-full h-4"
+            />
+          </div>
+  
+          {/* Price from/to */}
+          <div class="flex gap-2 items-center justify-end font-light">
+            <span class="skeleton w-full h-6" />
+            <span class="skeleton w-full h-6" />
+          </div>
+  
+          {/* Installments */}
+          <span class="skeleton w-full h-6" />
+
+          <div class="skeleton w-full h-12" /> 
+          </div>
+        </div>
+      </div>)
+}
+
 function HorizontalProductCard({
-  product,
+  page,
   preload,
   itemListName,
   index,
 }: Props) {
+    if (!page) {
+      return <ErrorFallback />
+    }
+  const { product }  = page;
   const { url, productID, name, image: images, offers, isVariantOf } = product;
   const id = `product-card-${productID}`;
   const description = product.description || isVariantOf?.description;
