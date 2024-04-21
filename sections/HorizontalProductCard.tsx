@@ -26,6 +26,59 @@ interface Props {
 
 const WIDTH = 200;
 const HEIGHT = 150;
+const aspectRatio = `${WIDTH} / ${HEIGHT}`;
+
+export function ErrorFallback({ error }: {error?: Error}) {
+  // Is to capture the error in logs!
+  console.log(error)
+  const IMAGE_URL_BOLO = "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/76495ce7-be7e-4f10-9303-b3fd97335510";
+  return <div
+  data-deco="view-product"
+  class="card card-compact group w-full border lg:p-4"
+  >
+
+  <div class="flex flex-row flex-wrap items-start max-md:justify-center md:justify-between rounded-xl min-h-52 gap-4 p-4">
+    <figure
+      class="relative overflow-hidden flex-shrink-0"
+      style={{ aspectRatio, width: WIDTH, height: HEIGHT }}
+    >
+      {/* Product Images */}
+      <a
+        href={"/"}
+        aria-label="view product"
+      >
+        <Image
+          src={IMAGE_URL_BOLO}
+          alt={"Bolo da katz"}
+          class="rounded-lg"
+          width={WIDTH}
+          height={HEIGHT}
+          style={{ aspectRatio }}
+          sizes="(max-width: 640px) 50vw, 20vw"
+          loading={"lazy"}
+          decoding="async"
+        />
+      </a>
+    </figure>
+
+    {/* Name/Description */}
+    <div class="flex flex-col gap-4 max-w-96">
+      <h2
+        class="text-base lg:text-lg uppercase"
+      >Bolo da katz</h2>
+
+      <p>Esse é um delicioso bolo. Você vai se deliciar com as gosturas que tem petrópolis</p>
+      <a
+        href={"/cultura"}
+        aria-label="view product"
+        class="btn btn-primary w-52"
+      >
+        Para saber mais
+      </a>
+    </div>
+    </div>
+</div>
+}
 
 function HorizontalProductCard({
   product,
@@ -39,7 +92,6 @@ function HorizontalProductCard({
   const [front] = images ?? [];
   const { listPrice, price, installments, seller = "1" } = useOffer(offers);
   const relativeUrl = relative(url);
-  const aspectRatio = `${WIDTH} / ${HEIGHT}`;
 
 
 
