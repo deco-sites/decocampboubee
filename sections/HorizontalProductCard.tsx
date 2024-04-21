@@ -1,6 +1,3 @@
-
-
-import type { Product } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import Image from "apps/website/components/Image.tsx";
 import type { Platform } from "../apps/site.ts";
