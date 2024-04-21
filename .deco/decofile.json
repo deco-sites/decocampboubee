@@ -1593,7 +1593,7 @@
       "height": 16
     },
     "alerts": [
-      "Use this template to create your store at deco.cx"
+      "Aqui você vai elevar seu nível!"
     ],
     "navItems": {
       "__resolveType": "navbar"
@@ -1604,7 +1604,6 @@
       "action": "/s",
       "loader": {
         "data": {
-          "count": 4,
           "__resolveType": "vtex/loaders/intelligentSearch/suggestions.ts"
         },
         "__resolveType": "resolved"
@@ -1616,7 +1615,13 @@
       "searches": []
     },
     "logoPosition": "center",
-    "__resolveType": "site/sections/Header/Header.tsx"
+    "__resolveType": "site/sections/Header/Header.tsx",
+    "buttons": {
+      "hideSearchButton": true,
+      "hideAccountButton": true,
+      "hideWishlistButton": true,
+      "hideCartButton": true
+    }
   },
   "Image Gallery - 01": {
     "title": "New collections",
@@ -2584,8 +2589,8 @@
   "navbar": {
     "items": [
       {
-        "url": "/feminino",
-        "name": "Feminino",
+        "url": "/quem-somos",
+        "name": "Quem somos",
         "@type": "SiteNavigationElement",
         "image": [
           {
@@ -2593,107 +2598,13 @@
             "@type": "ImageObject"
           }
         ],
-        "children": [
-          {
-            "url": "/feminino/saias",
-            "name": "Novidades",
-            "@type": "SiteNavigationElement",
-            "children": [
-              {
-                "url": "/feminino/vestidos",
-                "name": "Mais vendidos",
-                "@type": "SiteNavigationElement"
-              },
-              {
-                "url": "/feminino/vestidos",
-                "name": "Parcerias",
-                "@type": "SiteNavigationElement"
-              }
-            ]
-          }
-        ]
+        "children": []
       },
       {
-        "url": "/masculino",
-        "name": "Masculino",
+        "url": "/culturas",
+        "name": "Culturas",
         "@type": "SiteNavigationElement",
-        "image": [
-          {
-            "url": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/575c3b0f-1a2e-4ecb-aaad-532671dc553d",
-            "@type": "ImageObject"
-          }
-        ],
-        "children": [
-          {
-            "url": "/masculino",
-            "name": "Novidades",
-            "@type": "SiteNavigationElement",
-            "children": [
-              {
-                "url": "/masculino",
-                "name": "Mais vendidos",
-                "@type": "SiteNavigationElement"
-              },
-              {
-                "url": "/masculino",
-                "name": "Parcerias",
-                "@type": "SiteNavigationElement"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "url": "/sale",
-        "name": "Sale",
-        "@type": "SiteNavigationElement",
-        "image": [
-          {
-            "url": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/5e9310c0-c725-4643-ade3-f92a505bd1d6",
-            "@type": "ImageObject"
-          }
-        ],
-        "children": [
-          {
-            "url": "/feminino",
-            "name": "Feminino",
-            "@type": "SiteNavigationElement",
-            "children": [
-              {
-                "url": "/feminino",
-                "name": "Camisetas",
-                "@type": "SiteNavigationElement"
-              },
-              {
-                "url": "/feminino",
-                "name": "Camisas",
-                "@type": "SiteNavigationElement"
-              }
-            ]
-          },
-          {
-            "url": "/masculino",
-            "name": "Masculino",
-            "@type": "SiteNavigationElement",
-            "children": [
-              {
-                "url": "/masculino",
-                "name": "Camisetas",
-                "@type": "SiteNavigationElement"
-              },
-              {
-                "url": "/masculino",
-                "name": "Regatas",
-                "@type": "SiteNavigationElement"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "url": "/linktree",
-        "name": "Link Tree",
-        "@type": "SiteNavigationElement"
+        "children": []
       }
     ],
     "__resolveType": "commerce/loaders/navbar.ts"
@@ -3664,6 +3575,16 @@
             "text": "Conheça sites performaticos"
           }
         ]
+      }
+    ],
+    "__resolveType": "website/pages/Page.tsx"
+  },
+  "pages-My%20New%20Page-57358": {
+    "name": "Cultura",
+    "path": "/culturas",
+    "sections": [
+      {
+        "__resolveType": "Header - 01"
       }
     ],
     "__resolveType": "website/pages/Page.tsx"
