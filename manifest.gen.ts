@@ -4,6 +4,8 @@
 
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
+import * as $$$$$$$$0 from "./flags/multivariante/ProductDetailsVariant.ts";
+import * as $$$$$$$$1 from "./flags/multivariante/ProductListVariant.ts";
 import * as $$$2 from "./loaders/actions/addProductVote.ts";
 import * as $$$3 from "./loaders/actions/getAllVotes.ts";
 import * as $$$4 from "./loaders/actions/getProductVote.ts";
@@ -11,6 +13,7 @@ import * as $$$5 from "./loaders/availableIcons.ts";
 import * as $$$6 from "./loaders/icons.ts";
 import * as $$$0 from "./loaders/Layouts/ProductCard.tsx";
 import * as $$$1 from "./loaders/List/Sections.tsx";
+import * as $$$$$$$0 from "./matchers/utm.ts";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Cards/IconCardsCarousel.tsx";
 import * as $$$$$$2 from "./sections/Cards/IconCardsCarouselWithImage.tsx";
@@ -129,6 +132,13 @@ const manifest = {
     "site/sections/Social/WhatsApp.tsx": $$$$$$50,
     "site/sections/Theme/Theme.tsx": $$$$$$51,
     "site/sections/Weather.tsx": $$$$$$52,
+  },
+  "matchers": {
+    "site/matchers/utm.ts": $$$$$$$0,
+  },
+  "flags": {
+    "site/flags/multivariante/ProductDetailsVariant.ts": $$$$$$$$0,
+    "site/flags/multivariante/ProductListVariant.ts": $$$$$$$$1,
   },
   "apps": {
     "site/apps/decohub.ts": $$$$$$$$$$$0,
