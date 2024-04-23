@@ -2,8 +2,8 @@ import MiniCart from "../components/minicart/vtex/Cart.tsx"
 
 function Cart() {
     return (
-        <div>
-          <MiniCart />  
+        <div class="flex flex-col m-auto my-4 w-fit">
+            <MiniCart />
         </div>
     );
 }
