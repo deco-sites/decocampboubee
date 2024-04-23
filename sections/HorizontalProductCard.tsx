@@ -7,6 +7,7 @@ import { formatPrice } from "../sdk/format.ts";
 import { relative } from "../sdk/url.ts";
 import { useOffer } from "../sdk/useOffer.ts";
 import type { ProductDetailsPage } from "apps/commerce/types.ts";
+import UpdateProduct from "../components/product/updateProduct.tsx"
 
 export type MaxWidth =
   | "max-w-xl"
@@ -72,7 +73,6 @@ export function ErrorFallback({ error }: { error?: Error }) {
             />
           </a>
         </figure>
-
         {/* Name/Description */}
         <div class="flex flex-col gap-4 max-w-96">
           <h2 class="text-base lg:text-lg uppercase">Bolo da katz</h2>
@@ -205,7 +205,7 @@ function HorizontalProductCard({
 
       <div class="flex flex-row items-start max-md:justify-center md:justify-between rounded-xl min-h-52 gap-4 p-4">
         <div class="flex justify-start gap-4">
-          <div class="flex flex-col gap-4 w-full h-full">
+          <div class="flex flex-col gap-4 w-full h-full relative">
             <figure
               class="relative overflow-hidden"
               style={{ aspectRatio, width: WIDTH, height: HEIGHT }}
@@ -231,6 +231,7 @@ function HorizontalProductCard({
                 />
               </a>
             </figure>
+            <UpdateProduct productId={productID} />
             <div class="w-full md:hidden">
               <AddToCartButton
                 eventParams={{ items: [eventItem] }}
