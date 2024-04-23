@@ -1713,35 +1713,43 @@
     "__resolveType": "site/sections/Images/ImageGallery.tsx"
   },
   "Image Gallery - 04": {
-    "title": "etset",
+    "title": "Cultura",
     "layout": {
       "desktop": "Symmetrical",
-      "headerAlignment": "left"
+      "headerAlignment": "left",
+      "borderRadius": {
+        "mobile": "none",
+        "desktop": "none"
+      },
+      "mobile": "Asymmetric"
     },
     "banners": [
       {
-        "alt": "Fashion",
-        "href": "/",
-        "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/29dbf8d4-90c3-43f7-9b6b-4c6bda5e7835",
-        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/f7b0094f-b8f6-4806-bd43-4f4482958960"
+        "alt": "Museu Imperial",
+        "href": "/cultura",
+        "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/d1629394-435c-491c-8147-e6d6d5effd7e",
+        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/e1c637e9-a7f3-4974-a6a6-d61eaa103006"
       },
       {
-        "alt": "Fashion",
-        "href": "/",
-        "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/3210eea1-5437-4f19-8327-8b8fa4edfc45"
+        "alt": "Palacio de Cristal",
+        "href": "/cultura",
+        "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/89b988df-335c-443f-b13a-c588b68121e3",
+        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/4f0670d8-1bd6-439b-8b10-383ed90c3da1"
       },
       {
-        "alt": "Fashion",
-        "href": "/",
-        "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/1e6250d4-f9d2-4185-b8a6-b0e8a8fed4a7"
+        "alt": "Hotel Quitandinha",
+        "href": "/cultura",
+        "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/e0098d4d-0429-467e-82e3-0c1f712ccbba",
+        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/4e52287f-72f0-4c1b-a5f9-9d7883d81ce9"
       },
       {
-        "alt": "Fashion",
-        "href": "/",
-        "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/a8d36df6-4b96-4421-bb6c-de0fe1478e06"
+        "alt": "Catedral",
+        "href": "/cultura",
+        "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/822d11aa-e35b-440d-afce-34d758cf5a68",
+        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/7795/0a646af3-f788-4074-9127-77f8999cd030"
       }
     ],
-    "description": "Discover the collections of the season",
+    "description": "Aqui você vai descobri um pouco da nossa cultura",
     "__resolveType": "site/sections/Images/ImageGallery.tsx"
   },
   "Lemonade": {
@@ -2668,17 +2676,20 @@
         "__resolveType": "PartialImageGalery"
       },
       {
+        "__resolveType": "Image Gallery - 04"
+      },
+      {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
         "layout": {
           "showArrows": true
         },
         "products": {
+          "__resolveType": "vtex/loaders/legacy/productList.ts",
           "props": {
             "sort": "OrderByReleaseDateDESC",
             "count": 8
           },
-          "crossSelling": "similars",
-          "__resolveType": "vtex/loaders/legacy/productList.ts"
+          "crossSelling": "similars"
         },
         "cardLayout": {
           "layout": {
