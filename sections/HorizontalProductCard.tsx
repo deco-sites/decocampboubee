@@ -6,8 +6,8 @@ import AddToCartButton from "../islands/AddToCartButton/vtex.tsx";
 import { formatPrice } from "../sdk/format.ts";
 import { relative } from "../sdk/url.ts";
 import { useOffer } from "../sdk/useOffer.ts";
-import type { ProductDetailsPage, Product } from "apps/commerce/types.ts";
-import UpdateProduct from "../components/product/updateProduct.tsx"
+import type { Product, ProductDetailsPage } from "apps/commerce/types.ts";
+import UpdateProduct from "../components/product/updateProduct.tsx";
 
 export type MaxWidth =
   | "max-w-xl"
@@ -150,6 +150,7 @@ export function LoadingFallback() {
 function HorizontalProductCard({
   page,
   isPDPLoader,
+  products,
   preload,
   itemListName,
   index,
@@ -157,17 +158,17 @@ function HorizontalProductCard({
   animateImage,
 }: Props) {
   let product;
-  
+
   if (isPDPLoader) {
     if (!page) {
       return <ErrorFallback />;
-    } 
-    product = page.product
+    }
+    product = page.product;
   } else {
-    if(!products || products.length < 1) {
+    if (!products || products.length < 1) {
       return <ErrorFallback />;
     }
-    product = products[0]
+    product = products[0];
   }
   const { url, productID, name, image: images, offers, isVariantOf } = product;
   const id = `product-card-${productID}`;
