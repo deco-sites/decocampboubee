@@ -10,7 +10,9 @@
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.0",
     "std/": "https://deno.land/std@0.190.0/",
     "partytown/": "https://cdn.jsdelivr.net/gh/deco-cx/partytown@0.4.8/",
-    "daisyui": "npm:daisyui@4.6.0"
+    "daisyui": "npm:daisyui@4.6.0",
+    "react-toastify": "https://esm.sh/react-toastify@9.1.1?&external=react,react-dom&alias=react/jsx-runtime:preact/jsx-runtime&deps=preact@10.19.2&target=es2022",
+    "react": "https://esm.sh/preact@10.19.2/compat"
   },
   "tasks": {
     "start": "deno task generate-icons && deno task bundle && deno run -A --unstable --env --watch=tailwind.css,sections/,functions/,loaders/,actions/,workflows/,accounts/,.env dev.ts",

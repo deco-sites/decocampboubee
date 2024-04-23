@@ -1,8 +1,8 @@
-import { invoke } from "../../runtime.ts";
 import Icon from "../ui/Icon.tsx";
 import { getProductVote, updateVote } from "../../sdk/useVotes.ts";
 import { useRef } from "preact/hooks";
 import { useSignal } from "@preact/signals";
+import { Bounce, toast, ToastContainer } from 'react-toastify';
 
 export interface Props {
   productId: string;
@@ -17,15 +17,17 @@ function updateProduct({ productId }: Props) {
   const votes = useRef(null);
 
   setInterval(() => getProductVote(productId, product), THITRYSECONDS);
+  const notify = () => toast.success('Obrigado por votar!');
 
   return (
-    <div class="absolute right-0 top-0">
+    <div class="absolute right-0 top-4">
       <button
         class="relative"
         onClick={async () => {
           const response = await updateVote(productId, product);
 
           if (response.isUpdate) {
+            notify()
             smileCheck.current.className = "block";
             smile.current.className = "hidden";
             votes.current.className = "absolute block -top-4 right-0";
@@ -41,6 +43,19 @@ function updateProduct({ productId }: Props) {
         <span ref={votes} class="absolute hidden -top-4 right-0">
           {product.value}
         </span>
+        <ToastContainer
+          position="top-left"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          transition={Bounce}
+        />
       </button>
     </div>
   );
