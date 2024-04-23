@@ -3,7 +3,7 @@ import { getProductVote, updateVote } from "../../sdk/useVotes.ts";
 import { useRef } from "preact/hooks";
 import { useSignal } from "@preact/signals";
 import { sendEvent } from "../../sdk/analytics.tsx";
-import { Bounce, toast, ToastContainer } from 'react-toastify';
+import { Bounce, toast, ToastContainer } from "react-toastify";
 
 export interface Props {
   productId: string;
@@ -18,7 +18,7 @@ function updateProduct({ productId }: Props) {
   const votes = useRef(null);
 
   setInterval(() => getProductVote(productId, product), THITRYSECONDS);
-  const notify = () => toast.success('Obrigado por votar!');
+  const notify = () => toast.success("Obrigado por votar!");
 
   return (
     <div class="absolute right-0 top-4">
@@ -28,8 +28,11 @@ function updateProduct({ productId }: Props) {
           const response = await updateVote(productId, product);
 
           if (response.isUpdate) {
-            sendEvent({ name: "post_score", params: { character: productId, score: 1 } })
-            notify()
+            sendEvent({
+              name: "post_score",
+              params: { character: productId, score: 1 },
+            });
+            notify();
             smileCheck.current.className = "block";
             smile.current.className = "hidden";
             votes.current.className = "absolute block -top-4 right-0";

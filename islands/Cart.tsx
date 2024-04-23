@@ -1,1 +1,1 @@
-export { default } from "../sections/Cart.tsx"
+export { default } from "../sections/Cart.tsx";

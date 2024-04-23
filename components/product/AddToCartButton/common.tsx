@@ -3,7 +3,7 @@ import { useState } from "preact/hooks";
 import Button from "../../../components/ui/Button.tsx";
 import { sendEvent } from "../../../sdk/analytics.tsx";
 import { useUI } from "../../../sdk/useUI.ts";
-import { Bounce, toast } from 'react-toastify';
+import { Bounce, toast } from "react-toastify";
 
 export interface Props {
   /** @description: sku name */
@@ -14,7 +14,10 @@ export interface Props {
 const useAddToCart = ({ eventParams, onAddItem }: Props) => {
   const [loading, setLoading] = useState(false);
   const { displayCart } = useUI();
-  const notify = () => toast.success('Obrigado por comprar! Visite a página /cart ou olhe o minicart');
+  const notify = () =>
+    toast.success(
+      "Obrigado por comprar! Visite a página /cart ou olhe o minicart",
+    );
 
   const onClick = async (e: MouseEvent) => {
     e.preventDefault();
@@ -29,7 +32,7 @@ const useAddToCart = ({ eventParams, onAddItem }: Props) => {
         name: "add_to_cart",
         params: eventParams,
       });
-      notify()
+      notify();
       displayCart.value = true;
     } finally {
       setLoading(false);
