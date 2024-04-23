@@ -6,7 +6,7 @@ import AddToCartButton from "../islands/AddToCartButton/vtex.tsx";
 import { formatPrice } from "../sdk/format.ts";
 import { relative } from "../sdk/url.ts";
 import { useOffer } from "../sdk/useOffer.ts";
-import type { ProductDetailsPage } from "apps/commerce/types.ts";
+import type { ProductDetailsPage, Product } from "apps/commerce/types.ts";
 import UpdateProduct from "../components/product/updateProduct.tsx"
 
 export type MaxWidth =
@@ -19,7 +19,11 @@ export type MaxWidth =
   | "max-w-7xl"
   | "max-w-full";
 interface Props {
-  page: ProductDetailsPage | null;
+  page?: ProductDetailsPage | null;
+
+  products?: Product[] | null;
+
+  isPDPLoader?: boolean;
   /** Preload card image */
   preload?: boolean;
 
@@ -145,16 +149,26 @@ export function LoadingFallback() {
 
 function HorizontalProductCard({
   page,
+  isPDPLoader,
   preload,
   itemListName,
   index,
   maxWidth,
   animateImage,
 }: Props) {
-  if (!page) {
-    return <ErrorFallback />;
+  let product;
+  
+  if (isPDPLoader) {
+    if (!page) {
+      return <ErrorFallback />;
+    } 
+    product = page.product
+  } else {
+    if(!products || products.length < 1) {
+      return <ErrorFallback />;
+    }
+    product = products[0]
   }
-  const { product } = page;
   const { url, productID, name, image: images, offers, isVariantOf } = product;
   const id = `product-card-${productID}`;
   const description = product.description || isVariantOf?.description;
