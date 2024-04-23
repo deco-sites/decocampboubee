@@ -4551,7 +4551,10 @@
     "platform": "vtex",
     "page": {
       "__resolveType": "PDP Loader"
-    }
+    },
+    "products": [],
+    "maxWidth": "max-w-xl",
+    "isPDPLoader": true
   },
   "SLIDER": {
     "content": [
