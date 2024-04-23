@@ -2,6 +2,7 @@ import Icon from "../ui/Icon.tsx";
 import { getProductVote, updateVote } from "../../sdk/useVotes.ts";
 import { useRef } from "preact/hooks";
 import { useSignal } from "@preact/signals";
+import { sendEvent } from "../../sdk/analytics.tsx";
 import { Bounce, toast, ToastContainer } from 'react-toastify';
 
 export interface Props {
@@ -27,6 +28,7 @@ function updateProduct({ productId }: Props) {
           const response = await updateVote(productId, product);
 
           if (response.isUpdate) {
+            sendEvent({ name: "post_score", params: { character: productId, score: 1 } })
             notify()
             smileCheck.current.className = "block";
             smile.current.className = "hidden";
