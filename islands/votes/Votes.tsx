@@ -1,1 +1,1 @@
-export { default } from "../../components/header/Buttons/Votes.tsx"
+export { default } from "../../components/header/Buttons/Votes.tsx";

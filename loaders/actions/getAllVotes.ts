@@ -1,1 +1,1 @@
-export { default } from "../../packs/actions/getAllVotes.ts"
+export { default } from "../../packs/actions/getAllVotes.ts";

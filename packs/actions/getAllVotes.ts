@@ -19,9 +19,11 @@ export default async function loader(
     }),
   };
 
-  const response = await fetch("https://camp-api.deco.cx/events", options).then((
-    res,
-  ) => res.json());
+  const response = await fetch("https://camp-api.deco.cx/events", options).then(
+    (
+      res,
+    ) => res.json(),
+  );
 
   return {
     "total": response.total,

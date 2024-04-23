@@ -16,7 +16,7 @@ const state = {
   displayMenu,
   displaySearchPopup,
   displaySearchDrawer,
-  total
+  total,
 };
 
 // Keyboard event listeners
