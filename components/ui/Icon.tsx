@@ -71,6 +71,7 @@ function Icon(
       height={height ?? size}
       strokeWidth={strokeWidth}
     >
+
       <use href={asset(`/sprites.svg#${id}`)} />
     </svg>
   );
